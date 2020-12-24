@@ -63,6 +63,10 @@
     color: gray;
 }
 
+.bottom-block-number-adaptive{
+    display: none;
+}
+
 @media all and (max-width: 992px){
     .bottom-block{
         top: 0;
@@ -77,10 +81,19 @@
 }
 
 @media all and (max-width: 500px){
-    .basket-block{
-        width: 80px;
-    }
     span{
         display: none;
+    }
+    .bottom-block-number-adaptive{
+        display: block;
+    }
+    .bottom-block-number{
+        display: none;
+    }
+    .btn_bottom-basket{
+        width: 75px;
+    }
+    .container_bottom-block{
+        justify-content: space-between;
     }
 }

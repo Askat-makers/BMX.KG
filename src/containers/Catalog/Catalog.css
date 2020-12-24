@@ -2,6 +2,7 @@
     max-width: 1150px;
     margin-right: auto;
     margin-left: auto;
+    padding-bottom: 170px;
 }
 
 h2{
@@ -52,4 +53,12 @@ h2{
 
 .block-card p{
     margin-bottom: 0;
+}
+
+@media all and (max-width: 400px){
+    .catalog-card-1{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
 }

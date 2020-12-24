@@ -20,7 +20,6 @@ const Favorites = () => {
             <Navibar />
             {!favoritesData ? (
                 <>
-                    <h3>Ваши избранные</h3>
                     <div style={{ display: 'flex', justifyContent: "center" }}>
                         <div style={{ height: "200px" }}>
 
@@ -37,7 +36,7 @@ const Favorites = () => {
                                 <div    >
                                     {favoritesData.products.map((item) => (
                                         <div key={item.product.id} style={{ display: "flex", padding: "3%", borderBottom: "1px solid rgba(173, 170, 170, 0.747)" }} className="favorite-cards">
-                                            <img className="favorite-img" style={{ maxWidth: "15%", borderRadius: "2%" }} src={item.product.image} alt="" />
+                                            <img className="favorite-img" style={{ width: "25%", borderRadius: "2%" }} src={item.product.image} alt="" />
                                             <div className="favorite-description" style={{ display: "flex", flexDirection: "column", alignItems: "start", marginLeft: "30px" }}>
                                                 <h5>{item.product.name}</h5>
                                                 <p>Описание: {item.product.description}</p>

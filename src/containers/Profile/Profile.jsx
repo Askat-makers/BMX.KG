@@ -3,6 +3,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Button, Modal, ModalBody } from 'react-bootstrap';
 import { authContext } from '../../contexts/AuthContext';
 import Navibar from '../Navibar/Navibar';
+import "./Profile.css"
+import Printer from '../../img/printer.png'
 
 const Profile = () => {
     const { getUserData, user } = useContext(authContext)
@@ -29,9 +31,9 @@ const Profile = () => {
                 (<>
                     <Navibar />
                     <div>
-                        <div>
+                        {/* <div>
                             <h3>Это ваш личный профиль {user.name}</h3>
-                        </div>
+                        </div> */}
                         <div>
                             <h4>История ваших заказов</h4>
                             <div>
@@ -41,7 +43,7 @@ const Profile = () => {
                                             <th>~</th>
                                             <th>Номер заказа</th>
                                             <th>Дата заказа</th>
-                                            <th>Стоимость</th>
+                                            <th className="admin-profile-price">Стоимость</th>
                                             <th>~</th>
                                         </tr>
                                     </thead>
@@ -51,7 +53,7 @@ const Profile = () => {
                                                 <td>{index + 1}</td>
                                                 <td>№ {item.orderNumber}</td>
                                                 <td>{`${item.date.year}-${item.date.month}-${item.date.day} ${item.date.hours}:${item.date.minutes}:${item.date.seconds}`}</td>
-                                                <td>{item.totalPrice} сом</td>
+                                                <td className="admin-profile-price">{item.totalPrice} сом</td>
                                                 <td>
                                                     <Button onClick={() => handleClick(item)}>Детали заказа</Button>
                                                 </td>
@@ -99,7 +101,7 @@ const Profile = () => {
                                                             )}
                                                     </table>
                                                     <p style={{ textAlign: "end" }}>Сумма: {orderDetail.totalPrice} сом</p>
-                                                    <button type="button" onClick={() => printJS({
+                                                    <button className="print-btn" type="button" onClick={() => printJS({
                                                         printable: orderDetail.products,
                                                         properties: [
                                                             {field: 'product.name', displayName: 'Название'}, 
@@ -109,7 +111,7 @@ const Profile = () => {
                                                             header: '<h3>RIDER.KG</h3>',
                                                         type: 'json'
                                                     })}>
-                                                        Print JSON Data
+                                                        <img src={Printer} alt=""/>
                                                     </button>
                                                 </ModalBody>
                                             </Modal>

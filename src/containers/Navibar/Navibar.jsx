@@ -64,14 +64,15 @@ const Navibar = () => {
             </Navbar>
             <div>
                 <div className="under-navbar-block">
-                    <div className="navbar-logo"></div>
                     <div className="under-navbar">
                         <div>
                             <Link to="/"><img className="navbar-img" src={logo} alt="" />Rider.Kg</Link>
                         </div>
                     </div>
                     <div className="search-block">
-                        <input className="search-inp" type="text" />
+                        <Link to="/catalog">
+                            <button className="btn_go-catalog navibar-btn">Каталог</button>
+                        </Link>
                     </div>
                 </div>
             </div>

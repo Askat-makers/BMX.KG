@@ -19,3 +19,9 @@
 .cart-icon{
     width: 250px;
 }
+
+@media all and (max-width: 363px){
+    .cart-nazavanie{
+        display: none;
+    }
+}

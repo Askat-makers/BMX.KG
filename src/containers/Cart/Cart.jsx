@@ -76,7 +76,7 @@ const Cart = (props) => {
                                     <thead>
                                         <tr>
                                             <th></th>
-                                            <th>Название</th>
+                                            <th className="cart-nazavanie">Название</th>
                                             <th>Кол-во</th>
                                             <th>Цена</th>
                                             <th></th>
@@ -88,7 +88,7 @@ const Cart = (props) => {
                                                 <td className="cart-image">
                                                     <img className="cart-image" src={item.product.image} alt="" />
                                                 </td>
-                                                <td>
+                                                <td className="cart-nazavanie">
                                                     {item.product.name}
                                                 </td>
                                                 <td className="cart-count">

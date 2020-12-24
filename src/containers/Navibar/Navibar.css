@@ -27,7 +27,9 @@ nav{
 }
 
 .under-navbar a{
-    color: #000000;
+    /* color: #000000; */
+    color: #ff6410;
+
 }
 .under-navbar a:hover{
     text-decoration: none;
@@ -39,19 +41,20 @@ nav{
     margin-left: auto;
     display: flex;
     justify-content: space-around;
-    line-height: 45px;
-}
-
-.search-inp{
-    width: 100%;
+    align-items: center;
+    /* color: #ff6410; */
 }
 
 .search-block{
-    width: 500px;
+    width: 100px;
 }
 
 .navbar-img{
     width: 50px;
+}
+
+.navibar-btn{
+    width: 100%;
 }
 
 @media all and (max-width: 992px){
@@ -62,7 +65,7 @@ nav{
         margin-top: 50px;
     }
 }
-@media all and (max-width: 669px){
+/* @media all and (max-width: 669px){
     .under-navbar-block{
         display: block;
     }
@@ -74,14 +77,4 @@ nav{
         margin-right: auto;
         margin-left: auto;
     }
-    
-    .search-block{
-        width: 500px;
-    }
-}
-
-@media all and (max-width: 525px){
-    .search-block{
-        width: 320px;
-    }
-}
+} */
