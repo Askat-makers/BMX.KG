@@ -3,6 +3,7 @@ import './Navibar.css'
 import { Nav, Navbar, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../img/logo.svg'
+import logout from '../../img/logout.png'
 
 const Navibar = () => {
 
@@ -11,6 +12,11 @@ const Navibar = () => {
     useEffect(() => {
         if (checkStatus) setState(true)
     }, [])
+
+    function logout1(){
+        localStorage.setItem("user", JSON.stringify(0))
+        setState(false)
+    }
 
     return (
         <>
@@ -45,6 +51,9 @@ const Navibar = () => {
                                 <Nav>
                                     <Link to="/profile" className="nav-link" role="button">
                                         Профиль
+                                    </Link>
+                                    <Link to="" className="nav-link" role="button">
+                                        <img onClick={logout1} src={logout} alt=""/>
                                     </Link>
                                 </Nav>
                             )

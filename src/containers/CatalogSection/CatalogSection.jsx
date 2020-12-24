@@ -35,22 +35,22 @@ const CatalogSection = () => {
                             </Link>
                         </div>
                         <div>
-                            <Link to="fboard">
+                            <Link to="/skate">
                                 <div className="card-in-catalog-home-page promo-card-product">
                                     <div className="photo-in-promo-catalog photo-in-catalog-of-mtb">
 
                                     </div>
-                                    <h5>MTB Велосипеды</h5>
+                                    <h5>Скейтборды</h5>
                                 </div>
                             </Link>
                         </div>
                         <div>
-                            <Link to="roller">
+                            <Link to="/roller">
                                 <div className="card-in-catalog-home-page promo-card-product">
                                     <div className="photo-in-promo-catalog photo-in-catalog-of-rollers">
 
                                     </div>
-                                    <h5>Запчасти для роликов</h5>
+                                    <h5>Ролики</h5>
                                 </div>
                             </Link>
                         </div>

@@ -19,3 +19,24 @@ table{
     display: flex;
     justify-content: center;
 }
+
+.admin-every-product:nth-child(even){
+    background-color: #e4e4e480;
+}
+
+/* add product */
+
+.inp-add-product{
+    margin: 5px 0;
+}
+
+.add-product-title{
+    margin: 0;
+}
+
+/* edit product */
+
+.admin-edit-product{
+    width: 100%;
+    margin-bottom: 5px;
+}

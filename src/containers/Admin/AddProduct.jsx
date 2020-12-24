@@ -30,28 +30,45 @@ const AddProduct = () => {
         <>
             {state ? (
                 <div>
-                    <h1>Добавить товар</h1>
                     <div>
-                        <select onChange={createNewProduct} name="category" id="">
-                            <option value="">Выберите категорию</option>
-                            <option value="bmx">BMX</option>
-                            <option value="fboard">Fboard</option>
-                            <option value="roller">РОЛИКИ</option>
-                            <option value="skate">СКЕЙТБОРД</option>
-                            <option value="samokat">САМОКАТЫ</option>
-                        </select>
-                        <input onChange={createNewProduct} type="text" placeholder="Название" name="name" />
-                        <input onChange={createNewProduct} type="text" placeholder="Поизводитель" name="manufacturer" />
-                        <input onChange={createNewProduct} type="text" placeholder="Вес" name="weight" />
-                        <input onChange={createNewProduct} type="text" placeholder="Гарантия" name="warranty" />
-                        <input onChange={createNewProduct} type="text" placeholder="Описание" name="description" />
-                        <input onChange={createNewProduct} type="text" placeholder="Год" name="year" />
-                        <input onChange={createNewProduct} type="text" placeholder="Фото" name="image" />
-                        <input onChange={createNewProduct} type="text" placeholder="Цена" name="price" />
-                        <input onChange={createNewProduct} type="text" placeholder="Цвет" name="color" />
-                        <Link to="/admin">
-                            <button onClick={() => addProduct(newProduct)}>Add</button>
-                        </Link>
+                        <div>
+                            <h1 style={{textAlign: "center"}}>Добавить товар</h1>
+                            <div>
+                                <div style={{display: "flex", justifyContent: "center"}}>
+                                    <div style={{display: "flex", justifyContent: "center", flexWrap: "wrap", width: "200px"}}>
+                                        <select onChange={createNewProduct} name="category" id="">
+                                            <option value="">Выберите категорию</option>
+                                            <option value="bmx">BMX</option>
+                                            <option value="fboard">Fboard</option>
+                                            <option value="roller">РОЛИКИ</option>
+                                            <option value="skate">СКЕЙТБОРД</option>
+                                            <option value="samokat">САМОКАТЫ</option>
+                                        </select>
+                                        <p className="add-product-title">Название</p>
+                                        <input className="inp-add-product" onChange={createNewProduct} type="text" placeholder="Название" name="name" />
+                                        <p className="add-product-title">Производитель</p>
+                                        <input className="inp-add-product" onChange={createNewProduct} type="text" placeholder="Поизводитель" name="manufacturer" />
+                                        <p className="add-product-title">Вес</p>
+                                        <input className="inp-add-product" onChange={createNewProduct} type="text" placeholder="Вес" name="weight" />
+                                        <p className="add-product-title">Гарантия</p>
+                                        <input className="inp-add-product" onChange={createNewProduct} type="text" placeholder="Гарантия" name="warranty" />
+                                        <p className="add-product-title">Описание</p>
+                                        <input className="inp-add-product" onChange={createNewProduct} type="text" placeholder="Описание" name="description" />
+                                        <p className="add-product-title">Год</p>
+                                        <input className="inp-add-product" onChange={createNewProduct} type="text" placeholder="Год" name="year" />
+                                        <p className="add-product-title">Фото</p>
+                                        <input className="inp-add-product" onChange={createNewProduct} type="text" placeholder="Фото" name="image" />
+                                        <p className="add-product-title">Цена</p>
+                                        <input className="inp-add-product" onChange={createNewProduct} type="text" placeholder="Цена" name="price" />
+                                        <p className="add-product-title">Цвет</p>
+                                        <input className="inp-add-product" onChange={createNewProduct} type="text" placeholder="Цвет" name="color" />
+                                        <Link to="/admin">
+                                            <button onClick={() => addProduct(newProduct)}>Add</button>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             ) : (

@@ -109,16 +109,16 @@ const ProductDetails = (props) => {
                                     }
                                     {checkProductInFavorites(productDetails.id) ?
                                         (
-                                            <button style={{ backgroundColor: checkProductInFavorites(productDetails.id) ? "red" : "white", color: checkProductInFavorites(productDetails.id) ? "white" : "#573ba3" }} onClick={() => addAndDeleteProductInFavorites(productDetails)} className="btn-add-to-wishlist">В избранном</button>
+                                            <button style={{ backgroundColor: checkProductInFavorites(productDetails.id) ? "red" : "white", marginLeft: "15px", color: checkProductInFavorites(productDetails.id) ? "white" : "#573ba3" }} onClick={() => addAndDeleteProductInFavorites(productDetails)} className="btn-add-to-wishlist">В избранном</button>
                                         )
                                         :
                                         (
-                                            <button onClick={() => addAndDeleteProductInFavorites(productDetails)} className="btn-add-to-wishlist">В избранное</button>
+                                            <button onClick={() => addAndDeleteProductInFavorites(productDetails)} className="btn-add-to-wishlist btn-favorite-details">В избранное</button>
                                         )
                                     }
                                     <p>
                                         Нравится {productDetails.likes}
-                                        <img style={{cursor: "pointer"}} onClick={() => addAndDeleteLikes(productDetails)} src={HeartIcon} alt=""/>
+                                        <img style={{ cursor: "pointer" }} onClick={() => addAndDeleteLikes(productDetails)} src={HeartIcon} alt="" />
                                     </p>
 
                                     <p className="detail-block-description">{productDetails.description}</p>
@@ -131,8 +131,8 @@ const ProductDetails = (props) => {
                                         {productDetails.comments.map((item, index) => (
                                             <div key={`${index + 1}`}>
                                                 <div className="user-name" style={{ display: "flex", alignItems: "center", textAlign: "left", padding: "3%", border: "1px solid #d5d5d5", marginBottom: "20px" }}>
-                                                    <div className="user" style={{width: "100%"}}>
-                                                        <div className="askat" style={{display: "flex", justifyContent: 'space-around', width: "100%"}}>
+                                                    <div className="user" style={{ width: "100%" }}>
+                                                        <div className="askat" style={{ display: "flex", justifyContent: 'space-around', width: "100%" }}>
                                                             <div>
                                                                 <div style={{ display: "flex", justifyContent: "start", alignItems: "center" }}>
                                                                     <img className="user-icon" style={{ width: "5%", marginRight: "3%" }} src={UserAvatar} alt="aaa" />
@@ -152,7 +152,7 @@ const ProductDetails = (props) => {
                                                             (
                                                                 item.answers.map(item => (
                                                                     <div key={item.id}>
-                                                                        <div style={{display: "flex", justifyContent: "center", alignItems: "flex-end"}}>
+                                                                        <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-end" }}>
                                                                             <div>
                                                                                 <img src={ArrowIcon} alt="" />
                                                                             </div>
@@ -203,7 +203,7 @@ const ProductDetails = (props) => {
                                         type="text"
                                     />
                                     <textarea
-                                        className="comment"
+                                        className="comment comment-area"
                                         style={{ width: "40%", height: "200px", margin: "30px 0" }}
                                         value={value2}
                                         onChange={(e) => setValue2(e.target.value)}

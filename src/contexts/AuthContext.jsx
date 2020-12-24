@@ -15,6 +15,8 @@ const reducer = (state = INIT_STATE, action) => {
             return { ...state, users: action.payload }
         case "GET_USER_DATA":
             return { ...state, user: action.payload}
+        default:
+            return {...state}
     }
 }
 

@@ -19,14 +19,14 @@ const Section = () => {
             <h4>Новинки</h4>
             <div className="section-card">
                 {arr.length ? arr.map(item => (
-                    <Link key={item.id} to={`/product-details${item.id}`}>
-                        <Card className="grow" style={{ width: '18rem' }}>
+                    <Card className="grow" style={{ width: '18rem' }}>
+                        <Link key={item.id} to={`/product-details${item.id}`}>
                             <Card.Img variant="top" src={item.image} />
                             <Card.Body>
                                 <Card.Title>{item.name}</Card.Title>
                             </Card.Body>
-                        </Card>
-                    </Link>
+                        </Link>
+                    </Card>
                 )) : null}
             </div>
         </Container>

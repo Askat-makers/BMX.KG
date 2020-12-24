@@ -35,7 +35,9 @@ const reducer = (state = INIT_STATE, action) => {
         case "GET_DETAILS_OF_PRODUCT":
             return { ...state, productDetails: action.payload }
         case "CLEAR_CART":
-            return {...state, products: []}
+            return {...state, products: [], productsCountInCart: 0}
+        default :
+            return {...state}
     }
 }
 
@@ -103,7 +105,7 @@ const ProductsContextProvider = ({ children }) => {
     //pagination start
     const [posts, setPosts] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
-    const [postsPerPage, setPostPerPage] = useState(6)
+    const [postsPerPage] = useState(6)
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -412,7 +414,6 @@ const ProductsContextProvider = ({ children }) => {
             sendCommentAnswer,
             addAndDeleteLikes,
             checkProductInLikes,
-            addAndDeleteLikes
         }}>
             {children}
         </productsContext.Provider>

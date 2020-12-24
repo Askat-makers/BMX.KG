@@ -23,8 +23,6 @@ const Profile = () => {
         handleShow()
     }
 
-    console.log(orderDetail)
-
     return (
         <>
             {user ?

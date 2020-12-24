@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { adminContext } from '../../contexts/AdminContext';
+import Navibar from '../Navibar/Navibar';
 import './Admin.css'
 
 const Admin = () => {
@@ -20,6 +21,7 @@ const Admin = () => {
 
     return (
         <>
+        <Navibar/>
         {state ? (
         <div>
             <div className="container">
@@ -49,7 +51,7 @@ const Admin = () => {
                     </thead>
                     <tbody>
                         {products.map((item, index) => (
-                            <tr key={item.id}>
+                            <tr key={item.id} className="admin-every-product">
                                 <td>{index + 1}</td>
                                 <td><a href={item.image}><img style={{ maxWidth: '100px' }} src={item.image} alt="" /></a></td>
                                 <td>{item.name}</td>
