@@ -1,0 +1,21 @@
+td{
+    border: 1px solid gray;
+}
+
+table{
+    width: 100%;
+}
+
+.container{
+    max-width: 95%;
+}
+
+.admin-panel{
+    display: flex;
+    justify-content: center;
+}
+
+.add-panel{
+    display: flex;
+    justify-content: center;
+}
