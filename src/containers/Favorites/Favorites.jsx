@@ -8,7 +8,7 @@ import Footer from '../Footer/Footer';
 
 const Favorites = () => {
 
-    const { favoritesData, getFavorites, changeCountFavoriteProducts, addAndDeleteProductInCart, checkProductInCart } = useContext(productsContext)
+    const { favoritesData, getFavorites, addAndDeleteProductInCart, checkProductInCart } = useContext(productsContext)
 
     useEffect(() => {
         getFavorites()

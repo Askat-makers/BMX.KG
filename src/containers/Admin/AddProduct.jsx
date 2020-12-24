@@ -9,7 +9,7 @@ const AddProduct = () => {
     let checkStatus = JSON.parse(localStorage.getItem("login"))
     useEffect(() => {
         if (checkStatus) setState(true)
-    })
+    }, [])
 
     const { addProduct } = useContext(adminContext)
 

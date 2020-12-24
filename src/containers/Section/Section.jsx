@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Card, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { productsContext } from '../../contexts/ProductsContext';
@@ -19,8 +19,8 @@ const Section = () => {
             <h4>Новинки</h4>
             <div className="section-card">
                 {arr.length ? arr.map(item => (
-                    <Card className="grow" style={{ width: '18rem' }}>
-                        <Link key={item.id} to={`/product-details${item.id}`}>
+                    <Card key={item.id} className="grow" style={{ width: '18rem' }}>
+                        <Link to={`/product-details${item.id}`}>
                             <Card.Img variant="top" src={item.image} />
                             <Card.Body>
                                 <Card.Title>{item.name}</Card.Title>

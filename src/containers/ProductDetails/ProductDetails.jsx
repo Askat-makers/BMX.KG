@@ -9,8 +9,6 @@ import UserAvatar from '../../img/userAvatar.svg'
 import ArrowIcon from '../../img/arrowIcon.png'
 import HeartIcon from '../../img/heart.png'
 
-// import { Modal } from 'bootstrap';
-
 const ProductDetails = (props) => {
     const {
         getDetailsOfProduct,
@@ -139,7 +137,7 @@ const ProductDetails = (props) => {
                                                                     <h5>{item.userName}</h5>
                                                                 </div>
                                                                 <div className="comment" style={{ marginLeft: " 8%", width: "80%" }}>
-                                                                    <span>
+                                                                    <span className="userComment-span">
                                                                         {item.userComment}
                                                                     </span>
                                                                 </div>
@@ -162,7 +160,7 @@ const ProductDetails = (props) => {
                                                                                     <h5>{item.userName}</h5>
                                                                                 </div>
                                                                                 <div className="comment" style={{ marginLeft: " 8%", width: "80%" }}>
-                                                                                    <span>
+                                                                                    <span className="userComment-span">
                                                                                         {item.userComment}
                                                                                     </span>
                                                                                 </div>
@@ -181,8 +179,8 @@ const ProductDetails = (props) => {
                                                                 <Modal.Title>Ответить пользователю {item.userName}</Modal.Title>
                                                             </Modal.Header>
                                                             <ModalBody>
-                                                                <input onChange={(e) => setValue3(e.target.value)} type="text" />
-                                                                <input onChange={(e) => setValue4(e.target.value)} type="text" />
+                                                                <input placeholder="Ваше имя" onChange={(e) => setValue3(e.target.value)} type="text" />
+                                                                <input placeholder="Ваш комментарий" onChange={(e) => setValue4(e.target.value)} type="text" />
                                                                 <button onClick={handleSaveAnswer}>Reply</button>
                                                             </ModalBody>
                                                         </Modal>

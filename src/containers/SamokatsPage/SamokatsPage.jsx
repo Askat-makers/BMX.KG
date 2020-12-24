@@ -15,7 +15,6 @@ import BottomBasket from '../Bottombasket/BottomBasket';
 const SamokatsPage = (props) => {
     const {
         getSamokats,
-        products,
         currentPosts,
         addAndDeleteProductInCart,
         checkProductInCart,
@@ -88,11 +87,11 @@ const SamokatsPage = (props) => {
                                     <option value="">Выберите цвет</option>
                                     <option value="black">Черный</option>
                                     <option value="white">Белый</option>
-                                    <option value="red">Красный</option>
-                                    <option value="gold">Золотой</option>
-                                    <option value="serebro">Серебристый</option>
                                     <option value="blue">Синий</option>
-                                    <option value="orange">Оранжевый</option>
+                                    <option value="purple">Фиолетовый</option>
+                                    <option value="gray">Серый</option>
+                                    <option value="blue">Синий</option>
+                                    <option value="green">Зеленый</option>
                                 </select>
                             </div>
                             <div className="parametr-block">
@@ -152,19 +151,19 @@ const SamokatsPage = (props) => {
                                                 <div>
                                                     {checkProductInCart(item.id) ?
                                                         (
-                                                            <img onClick={() => addAndDeleteProductInCart(item)} src={CartAfter} style={{ cursor: 'pointer' }} />
+                                                            <img onClick={() => addAndDeleteProductInCart(item)} src={CartAfter} style={{ cursor: 'pointer' }} alt="a"/>
                                                         ) :
                                                         (
-                                                            <img onClick={() => addAndDeleteProductInCart(item)} src={CartBefore} style={{ cursor: 'pointer' }} />
+                                                            <img onClick={() => addAndDeleteProductInCart(item)} src={CartBefore} style={{ cursor: 'pointer' }} alt="a"/>
                                                         )}
                                                 </div>
                                                 <div>
                                                     {checkProductInFavorites(item.id) ?
                                                         (
-                                                            <img onClick={() => addAndDeleteProductInFavorites(item)} src={StarAfter} style={{ cursor: 'pointer' }} />
+                                                            <img onClick={() => addAndDeleteProductInFavorites(item)} src={StarAfter} style={{ cursor: 'pointer' }} alt="a"/>
                                                         ) :
                                                         (
-                                                            <img onClick={() => addAndDeleteProductInFavorites(item)} src={StarBefore} style={{ cursor: 'pointer' }} />
+                                                            <img onClick={() => addAndDeleteProductInFavorites(item)} src={StarBefore} style={{ cursor: 'pointer' }} alt="a"/>
                                                         )}
                                                 </div>
                                             </div>

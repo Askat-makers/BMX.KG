@@ -2,7 +2,21 @@
   "products": [
     {
       "category": "bmx",
-      "comments": [],
+      "comments": [
+        {
+          "userName": "Askat",
+          "userComment": "Очень хороший велосипед",
+          "answers": [
+            {
+              "userName": "Ак-Тилек",
+              "userComment": "Точно? Не врешь?",
+              "answers": [],
+              "id": 1608834303326
+            }
+          ],
+          "id": 1608834201631
+        }
+      ],
       "likes": 0,
       "name": "BMX Велосипед Subrosa Altus 20\" 2021 (черный)",
       "manufacturer": "Subrosa",

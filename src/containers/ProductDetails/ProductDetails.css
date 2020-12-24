@@ -22,3 +22,9 @@
     height: 100px !important;
   }
 }
+
+@media all and (max-width: 500px){
+  .userComment-span{
+    display: block !important;
+  }
+}
