@@ -29,8 +29,10 @@ const Registration = (props) => {
         let result2 = regexp2.test(newUser.password)
         if (result && result2) {
             let newArr = users.filter(item => item.login === newUser.login)
-            console.log(newArr)
-            newArr.length ? alert("Аккаунт с таким email адресом уже существует") : registrNewUser(newUser, props.history)
+            return newArr.length ? alert("Аккаунт с таким email адресом уже существует") : registrNewUser(newUser, props.history)
+        }
+        if(!result && !result2 && !newUser.name){
+            return alert("Заполните все поля")
         }
         if(!result && !result2){
             return alert("Введите корректную почту и пароль должен быть больше восьми символов")
@@ -40,6 +42,9 @@ const Registration = (props) => {
         }
         if(!result2){
             return alert("Пароль должен быть больше восьми символов")
+        }
+        if(!newUser.name){
+            return alert("Введите ваше имя")
         }
     }
 

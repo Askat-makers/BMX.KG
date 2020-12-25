@@ -27,7 +27,6 @@ const AdminContextProvider = ({children}) => {
 
     const getProducts = async () => {
         const {data} = await axios(`${JSON_API}/products`)
-        console.log(data)
         dispatch({
             type: "GET_PRODUCTS",
             payload: data
@@ -60,7 +59,6 @@ const AdminContextProvider = ({children}) => {
 
     // Проверка на админ
     function checkOnAdmin(admin, history){
-        console.log(admin)
         if(admin.login === "test" && admin.password === "test"){
             localStorage.setItem("login", JSON.stringify(admin))
             history.push('/admin')

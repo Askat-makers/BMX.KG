@@ -50,6 +50,12 @@ const Cart = (props) => {
         }
     }
 
+    function handleChange(id, e) {
+        if(e.target.value <= 0) return
+        changeCountProducts(e.target.value, id)
+    }
+    console.log(cartData)
+
 
     return (
         <>
@@ -93,7 +99,7 @@ const Cart = (props) => {
                                                 <td className="cart-count">
                                                     <input
                                                         style={{ width: '60px' }}
-                                                        onChange={(e) => changeCountProducts(e.target.value, item.product.id)}
+                                                        onChange={(e) => handleChange(item.product.id, e)}
                                                         min="1"
                                                         type="number"
                                                         value={item.count}
@@ -109,7 +115,7 @@ const Cart = (props) => {
                                 </table>
                                 <div>
                                     <h5>Итого: {calcTotalPrice(cartData.products)}</h5>
-                                    <button onClick={handleShow}>Оплатить</button>
+                                    <button style={{backgroundColor: '#ff6410', borderColor: "#ff6410", color: "#fff"}} onClick={handleShow}>Оплатить</button>
                                 </div>
                             </div>
                             <Modal show={show} onHide={handleClose}>
@@ -128,7 +134,7 @@ const Cart = (props) => {
                                 <ModalBody>
                                     <p>Ваш заказ принят. Ожидайте курьера!</p>
                                 </ModalBody>
-                                <button onClick={handleClose1}>OK</button>
+                                <button style={{backgroundColor: '#ff6410', borderColor: "#ff6410", color: "#fff"}} onClick={handleClose1}>OK</button>
                             </Modal>
                         </div>
                         :

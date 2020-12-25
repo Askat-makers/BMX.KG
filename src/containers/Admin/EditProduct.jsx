@@ -13,7 +13,7 @@ const EditProduct = (props) => {
 
     const { productToEdit, saveEditedProduct } = useContext(adminContext)
     const [editedProduct, setEditedProduct] = useState(productToEdit)
-    console.log(productToEdit)
+    
     useEffect(() => {
         setEditedProduct(productToEdit)
     }, [productToEdit])

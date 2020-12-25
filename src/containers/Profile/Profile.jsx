@@ -22,7 +22,7 @@ const Profile = () => {
         setOrderDetail(obj)
         handleShow()
     }
-
+    
     return (
         <>
             {user ?
@@ -34,6 +34,8 @@ const Profile = () => {
                         </div> */}
                         <div>
                             <h4>История ваших заказов</h4>
+                            {user.historyOrders.length ? 
+                            (
                             <div>
                                 <table style={{ textAlign: 'center' }}>
                                     <thead>
@@ -120,8 +122,11 @@ const Profile = () => {
 
                                 </table>
                             </div>
+                            ) : 
+                            (
+                                <p style={{textAlign: "center"}}>Ваша история заказов пуста</p>
+                            )}
                         </div>
-
                     </div>
                 </>
                 )

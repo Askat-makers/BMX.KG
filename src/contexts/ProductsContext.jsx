@@ -46,8 +46,7 @@ const ProductsContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, INIT_STATE)
 
     // section start home page
-
-
+    
     const getLastProducts = async () => {
         const { data } = await axios(`${JSON_API}/products`)
         dispatch({
@@ -194,7 +193,7 @@ const ProductsContextProvider = ({ children }) => {
 
     function deleteProductInCart({ product }) {
         let cart = JSON.parse(localStorage.getItem("cart"))
-        console.log(product.id)
+
         let newCart = cart.products.filter(item => item.product.id !== product.id)
         cart.products = newCart
         cart.totalPrice = calcTotalPrice(cart.products)
@@ -314,7 +313,6 @@ const ProductsContextProvider = ({ children }) => {
     //comments start
 
     async function sendComment(product, value) {
-        console.log(value)
         product.comments.push(value)
         await axios.patch(`${JSON_API}/products/${product.id}`, product)
         getDetailsOfProduct(product.id)
@@ -322,7 +320,6 @@ const ProductsContextProvider = ({ children }) => {
 
     const sendCommentAnswer = async (product, value, commentId) => {
         const { data } = await axios(`${JSON_API}/products/${product.id}`)
-        console.log(commentId)
         data.comments.forEach(item => {
             if (item.id === commentId) {
                 return item.answers.push(value)
@@ -338,7 +335,6 @@ const ProductsContextProvider = ({ children }) => {
     //likes start
 
     async function addAndDeleteLikes(product) {
-        console.log(product)
         let likes = JSON.parse(localStorage.getItem("likes"))
         if (!likes) {
             likes = {

@@ -58,7 +58,6 @@ const BmxPage = (props) => {
         setPriceValue(search.get("price"))
     }
 
-
     useEffect(() => {
         setColorValue(search.get("color"))
         setYearValue(search.get("year"))

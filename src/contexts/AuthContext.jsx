@@ -41,7 +41,6 @@ const AuthContextProvider = ({ children }) => {
         const { data } = await axios(`${JSON_API}/users/${id}`)
         localStorage.setItem("user", JSON.stringify(data.id))
         history.push('/')
-        console.log(data)
     }
 
     const getUserData = async (id) => {

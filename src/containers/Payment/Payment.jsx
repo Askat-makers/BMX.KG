@@ -20,7 +20,7 @@ export default class PaymentForm extends React.Component {
     handleInputChange = (e) => {
         const { name, value } = e.target;
 
-        console.log(this.props)
+        // console.log(this.props)
         this.setState({ [name]: value });
     }
 

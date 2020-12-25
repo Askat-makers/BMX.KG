@@ -4,12 +4,13 @@ import { adminContext } from '../../contexts/AdminContext';
 
 const AddProduct = () => {
 
-    // check on admin
+    // check on admin start
     const [state, setState] = useState(false)
     let checkStatus = JSON.parse(localStorage.getItem("login"))
     useEffect(() => {
         if (checkStatus) setState(true)
     }, [])
+    // check on admin end
 
     const { addProduct } = useContext(adminContext)
 
@@ -23,7 +24,6 @@ const AddProduct = () => {
             likes: 0
         }
         setNewProduct(obj)
-        console.log(obj)
     }
 
     return (

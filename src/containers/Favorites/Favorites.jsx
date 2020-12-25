@@ -13,7 +13,7 @@ const Favorites = () => {
     useEffect(() => {
         getFavorites()
     }, [])
-    console.log(favoritesData)
+    
 
     return (
         <>
