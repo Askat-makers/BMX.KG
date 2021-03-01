@@ -13,7 +13,7 @@ const Navibar = () => {
         if (checkStatus) setState(true)
     }, [])
 
-    function logout1(){
+    function logout1() {
         localStorage.setItem("user", JSON.stringify(0))
         setState(false)
     }
@@ -45,6 +45,11 @@ const Navibar = () => {
                                     Самокаты
                                 </Link>
                             </Nav>
+                            <Nav>
+                                <Link className="nav-link" to="/checkOnAdmin">
+                                    Admin
+                                </Link>
+                            </Nav>
                         </Nav>
                         {state ?
                             (
@@ -53,7 +58,7 @@ const Navibar = () => {
                                         Профиль
                                     </Link>
                                     <Link to="" className="nav-link" role="button">
-                                        <img onClick={logout1} src={logout} alt=""/>
+                                        <img onClick={logout1} src={logout} alt="" />
                                     </Link>
                                 </Nav>
                             )
